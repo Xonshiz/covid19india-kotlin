@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Covid-19 Tracker</string>
+    <string name="loading">Loading...</string>
+    <string name="recovered">RECOVERED</string>
+    <string name="active">ACTIVE</string>
+    <string name="confirmed">CONFIRMED</string>
+    <string name="deceased">DECEASED</string>
+    <string name="today">Today</string>
+</resources>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/totalRecoveredCases"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/loading"
+                android:textColor="#007bff"
+                app:layout_constraintEnd_toEndOf="@+id/totalRecoveredCasesLabel"
+                app:layout_constraintStart_toStartOf="@+id/totalRecoveredCasesLabel"
+                app:layout_constraintTop_toTopOf="@+id/totalRecoveredCasesLabel" />
+
+            <TextView
+                android:id="@+id/totalConfirmedCases"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/loading"
+                android:textColor="#FF073A"
+                app:layout_constraintEnd_toEndOf="@+id/totalConfirmedCasesLabel"
+                app:layout_constraintHorizontal_bias="0.687"
+                app:layout_constraintStart_toStartOf="@+id/totalConfirmedCasesLabel"
+                app:layout_constraintTop_toTopOf="@+id/totalConfirmedCasesLabel" />
+
+            <TextView
+                android:id="@+id/totalDeceasedCases"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/loading"
+                android:textColor="#6c757d"
+                app:layout_constraintEnd_toEndOf="@+id/totalDeceasedCasesLabel"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/totalDeceasedCasesLabel"
+                app:layout_constraintTop_toBottomOf="@+id/totalDeceasedCasesLabel" />
+
+            <TextView
+                android:id="@+id/totalDeceasedCasesLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="52dp"
+                android:text="@string/deceased"
+                android:textColor="#6c757d"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@string/deceased" />
+
+            <TextView
+                android:id="@+id/todayDeceasedCases"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="33dp"
+                android:text="@string/loading"
+                android:textColor="#6c757d"
+                app:layout_constraintEnd_toEndOf="@+id/todayDeceasedCasesLabel"
+                app:layout_constraintStart_toStartOf="@+id/todayDeceasedCasesLabel"
+                app:layout_constraintTop_toTopOf="@+id/todayDeceasedCasesLabel" />
+
+            <TextView
+                android:id="@+id/todayRecoveredCasesLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="@string/today"
+                android:textColor="#007bff"
+                app:layout_constraintEnd_toStartOf="@+id/todayDeceasedCasesLabel"
+                app:layout_constraintStart_toEndOf="@+id/todayConfirmedCasesLabel"
+                app:layout_constraintTop_toBottomOf="@+id/totalRecoveredCases"
+                tools:text="@string/today" />
+
+            <TextView
+                android:id="@+id/totalRecoveredCasesLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:text="@string/recovered"
+                android:textColor="#007bff"
+                app:layout_constraintEnd_toStartOf="@+id/totalDeceasedCasesLabel"
+                app:layout_constraintStart_toEndOf="@+id/totalConfirmedCasesLabel"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@string/recovered" />
+
+            <TextView
+                android:id="@+id/todayDeceasedCasesLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="64dp"
+                android:text="@string/today"
+                android:textColor="#6c757d"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/totalDeceasedCases"
+                tools:text="@string/today" />
+
+            <TextView
+                android:id="@+id/todayConfirmedCasesLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/today"
+                android:textColor="#FF073A"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/totalConfirmedCases"
+                tools:text="@string/today" />
+
+            <TextView
+                android:id="@+id/todayConfirmedCases"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/loading"
+                android:textColor="#FF073A"
+                app:layout_constraintEnd_toEndOf="@+id/todayConfirmedCasesLabel"
+                app:layout_constraintHorizontal_bias="0.391"
+                app:layout_constraintStart_toStartOf="@+id/todayConfirmedCasesLabel"
+                app:layout_constraintTop_toBottomOf="@+id/todayConfirmedCasesLabel" />
+
+            <TextView
+                android:id="@+id/todayRecoveredCases"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="31dp"
+                android:text="@string/loading"
+                android:textColor="#007bff"
+                app:layout_constraintEnd_toEndOf="@+id/todayRecoveredCasesLabel"
+                app:layout_constraintStart_toStartOf="@+id/todayRecoveredCasesLabel"
+                app:layout_constraintTop_toTopOf="@+id/todayRecoveredCasesLabel" />
+
+            <TextView
+                android:id="@+id/totalConfirmedCasesLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="28dp"
+                android:text="@string/confirmed"
+                android:textColor="#FF073A"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@string/confirmed" />
+
+            <TableLayout
+                android:id="@+id/table_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/todayConfirmedCases"></TableLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
